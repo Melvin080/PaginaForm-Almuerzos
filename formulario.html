@@ -24,66 +24,119 @@
                 <p class="pregunta-titulo">2. Área <span class="requerido">*</span></p>
                 <div class="opciones-group">
                     <label>
-                        <input type="radio" name="area" value="Operacion" required> Operación
+                        <input type="radio" name="area" value="Area-0" required> Operación
                     </label>
                     <label>
-                        <input type="radio" name="area" value="Mantenimiento" required> Mantenimiento
+                        <input type="radio" name="area" value="Area-1" required> Mantenimiento
                     </label>
                     <label>
-                        <input type="radio" name="area" value="Administrativo / Visitante" required> Administrativo / Visitante
+                        <input type="radio" name="area" value="Area-2" required> Administrativo / Visitante
                     </label>
                     <label>
-                        <input type="radio" name="area" value="Contratista" required> Contratista
-                    </label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <p class="pregunta-titulo">3. Opción de menú <span class="requerido">*</span></p>
-                <div class="opciones-group">
-                    <label>
-                        <input type="radio" name="opcion-menu" value="Almuerzo" required> Almuerzo
-                    </label>
-                    <label>
-                        <input type="radio" name="opcion-menu" value="Almuerzo" required> Almuerzo Saludable
-                    </label>
-                    <label>
-                        <input type="radio" name="opcion-menu" value="Cena" required> Cena </label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <p class="pregunta-titulo">4. Menu normal <span class="requerido">*</span></p>
-                <div class="opciones-group">
-                    <label>
-                        <input type="checkbox" name="menu-normal" value="No aplica"> No aplica
-                    </label>
-                    <label>
-                        <input type="checkbox" name="menu-normal" value="Arroz"> Arroz
-                    </label>
-                    <label>
-                        <input type="checkbox" name="menu-normal" value="Carne"> Carne
-                    </label>
-                    <label>
-                        <input type="checkbox" name="menu-normal" value="Huevos"> Huevos
+                        <input type="radio" name="area" value="Area-3" required> Contratista
                     </label>
                 </div>
             </div>
 
             <div class="form-group">
-                <p class="pregunta-titulo">5. Menu saludable <span class="requerido">*</span></p>
+                <p class="pregunta-titulo">3. Opción de Menú <span class="requerido">*</span></p>
                 <div class="opciones-group">
                     <label>
-                        <input type="radio" name="menu-saludable" value="No aplica" required> No aplica
+                        <input type="radio" name="opcion-menu" value="Opcion-0" required> Almuerzo
                     </label>
                     <label>
-                        <input type="radio" name="menu-saludable" value="Completo" required> Completo
+                        <input type="radio" name="opcion-menu" value="Opcion-1" required> Almuerzo Saludable
                     </label>
                     <label>
-                        <input type="radio" name="menu-saludable" value="Sin carne" required> Sin carne
+                        <input type="radio" name="opcion-menu" value="Opcion-2" required> Cena </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="pregunta-titulo">4. Menú Normal: Acompañamientos(). <span class="requerido">*</span></p>
+                <div class="opciones-group">
+                    <label>
+                        <input type="checkbox" name="menu-normal" value="Normal-0"> No aplica
                     </label>
                     <label>
-                        <input type="radio" name="menu-saludable" value="Sin arroz" required> Sin arroz
+                        <input type="checkbox" name="menu-normal" value="Normal-1"> Arroz
+                    </label>
+                    <label>
+                        <input type="checkbox" name="menu-normal" value="Normal-2"> Carne
+                    </label>
+                    <label>
+                        <input type="checkbox" name="menu-normal" value="Normal-3"> Huevos
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="no-acompañamiento">5. Escriba el/los acompañamientos del almuerzo que <span>NO</span> quiere <span class="requerido">*</span></label>
+                <input type="text" id="no-acompañamiento" name="no-acompañamiento" placeholder="Escriba aquí" required>
+            </div>
+
+            <div class="form-group">
+                <p class="pregunta-titulo">6. Menú Saludable <span class="requerido">*</span></p>
+                <div class="opciones-group">
+                    <label>
+                        <input type="radio" name="menu-saludable" value="Saludable-0" required> No aplica
+                    </label>
+                    <label>
+                        <input type="radio" name="menu-saludable" value="Saludable-1" required> Completo
+                    </label>
+                    <label>
+                        <input type="radio" name="menu-saludable" value="Saludable-2" required> Sin carne
+                    </label>
+                    <label>
+                        <input type="radio" name="menu-saludable" value="Saludable-3" required> Sin arroz
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="pregunta-titulo">7. Sopa de () <span class="requerido">*</span></p>
+                <div class="opciones-group">
+                    <label>
+                        <input type="radio" name="sopa" value="Sopa-0" required> No
+                    </label>
+                    <label>
+                        <input type="radio" name="sopa" value="Sopa-1" required> Si
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="pregunta-titulo">8. Menú Cenas <span class="requerido">*</span></p>
+                <div class="opciones-group">
+                    <label>
+                        <input type="radio" name="menu-cenas" value="Cena-0" required> No aplica
+                    </label>
+                    <label>
+                        <input type="radio" name="menu-cenas" value="Cena-1" required> Cena uno
+                    </label>
+                    <label>
+                        <input type="radio" name="menu-cenas" value="Cena-2" required> Cena dos
+                    </label>
+                    <label>
+                        <input type="radio" name="menu-cenas" value="Cena-3" required> Cena tres
+                    </label>
+                    <label>
+                        <input type="radio" name="menu-cenas" value="Cena-4" required> Cena cuatro
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <p class="pregunta-titulo">9. Bebida <span class="requerido">*</span></p>
+                <div class="opciones-group">
+                    <label>
+                        <input type="radio" name="bebida" value="bebida-0" required> Sin bebida
+                    </label>
+                    <label>
+                        <input type="radio" name="bebida" value="bebida-1" required> Agua con Gas
+                    </label>
+                    <label>
+                        <input type="radio" name="bebida" value="bebida-2" required> Agua Saborizada
                     </label>
                 </div>
             </div>
