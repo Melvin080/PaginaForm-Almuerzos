@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú del día</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Menú del día</h1>
+            <p>Antes de enviar el formulario asegurece de llenar los campos. <span class="requerido">*Obligatorio</span></p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="nombre">1. Nombre <span class="requerido">*</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" required>
+            </div>
+
+            <div class="form-group">
+                <p class="pregunta-titulo">2. Área <span class="requerido">*</span></p>
+                <div class="opciones-group">
+                    <label>
+                        <input type="radio" name="area" value="Operacion" required> Operación
+                    </label>
+                    <label>
+                        <input type="radio" name="area" value="Mantenimiento" required> Mantenimiento
+                    </label>
+                    <label>
+                        <input type="radio" name="area" value="Administrativo / Visitante" required> Administrativo / Visitante
+                    </label>
+                    <label>
+                        <input type="radio" name="area" value="Contratista" required> Contratista
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="pregunta-titulo">3. Opción de menú <span class="requerido">*</span></p>
+                <div class="opciones-group">
+                    <label>
+                        <input type="radio" name="opcion-menu" value="Menu normal" required> Menu normal
+                    </label>
+                    <label>
+                        <input type="radio" name="opcion-menu" value="Menu Saludable" required> Menu Saludable
+                    </label>
+                    <label>
+                        <input type="radio" name="opcion-menu" value="Cena" required> Cena </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="pregunta-titulo">4. Menu normal <span class="requerido">*</span></p>
+                <div class="opciones-group">
+                    <label>
+                        <input type="checkbox" name="menu-normal" value="No aplica"> No aplica
+                    </label>
+                    <label>
+                        <input type="checkbox" name="menu-normal" value="Arroz"> Arroz
+                    </label>
+                    <label>
+                        <input type="checkbox" name="menu-normal" value="Carne"> Carne
+                    </label>
+                    <label>
+                        <input type="checkbox" name="menu-normal" value="Huevos"> Huevos
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="pregunta-titulo">5. Menu saludable <span class="requerido">*</span></p>
+                <div class="opciones-group">
+                    <label>
+                        <input type="radio" name="menu-saludable" value="No aplica" required> No aplica
+                    </label>
+                    <label>
+                        <input type="radio" name="menu-saludable" value="Completo" required> Completo
+                    </label>
+                    <label>
+                        <input type="radio" name="menu-saludable" value="Sin carne" required> Sin carne
+                    </label>
+                    <label>
+                        <input type="radio" name="menu-saludable" value="Sin arroz" required> Sin arroz
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" class="submit-button">Enviar</button>
+                <p class="form-info">No revele nunca su contraseña.</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
