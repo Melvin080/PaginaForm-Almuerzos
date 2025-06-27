@@ -1,8 +1,4 @@
 //Cuando se abre la pagina de formulario.
-const API_URL_GET = "https://3af5a8bdea68e21b9770cc8a4b60a9.04.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/3343cf09ef314da4ba8d247d373c256e/triggers/manual/paths/invoke/?api-version=1&tenantId=tId&environmentName=3af5a8bd-ea68-e21b-9770-cc8a4b60a904&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=IEiz7pVDpJyrnJKG1sFWhmQh8Yb377bMzbIXmLNI6fA";
-
-const API_URL_POST = "https://3af5a8bdea68e21b9770cc8a4b60a9.04.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8d2410f0cfa440e8a47cf2eef7e8979a/triggers/manual/paths/invoke/?api-version=1&tenantId=tId&environmentName=3af5a8bd-ea68-e21b-9770-cc8a4b60a904&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Rm0av8lcs9XedynEBWuaFrSdEXmeVtCR8Tp2Kv_Cc6c";
-
 const elementoFormulario = document.getElementById('form-form');
 const bebidasFlag = document.getElementById('div-bebidas');
 const responseDiv = document.getElementById('respuesta');
