@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let horaMaxima = 13.45;
     
     let utcHora = horaActual+(minutosActual/100);
-    if (horaMinima != utcHora && utcHora != horaMaxima) {
+    if (horaMinima <= utcHora && utcHora <= horaMaxima) {
         formulario.style.display = 'block';
         mensajeDisponible.style.display = 'none';
     }else {
