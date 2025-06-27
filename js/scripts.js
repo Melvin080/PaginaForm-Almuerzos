@@ -178,6 +178,17 @@ document.addEventListener("DOMContentLoaded", async () => {
                     dataToPost[key] = value;
                 }
             }
+            //Unir los datos array en string.
+            for (const key in dataToPost) {
+                if (Object.hasOwnProperty.call(dataToPost, key)) {
+                    const value = dataToPost[key];
+                    if (Array.isArray(value)) {
+                        dataToPost[key] = value.join(', ');
+                    } else {
+                        dataToPost[key] = value;
+                    }
+                }
+            }
 
             const jsonData = JSON.stringify(dataToPost);
             //console.log("JSON a enviar (POST):", jsonData);
