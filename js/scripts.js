@@ -1,4 +1,6 @@
 //Cuando se abre la pagina de formulario.
+const API_URL_GET = process.env.API_URL_GET;
+const API_URL_POST = process.env.API_URL_POST;
 const elementoFormulario = document.getElementById('form-form');
 const bebidasFlag = document.getElementById('div-bebidas');
 const responseDiv = document.getElementById('respuesta');
