@@ -1,6 +1,4 @@
 //Cuando se abre la pagina de formulario.
-const API_URL_GET = process.env.API_URL_GET;
-const API_URL_POST = process.env.API_URL_POST;
 const elementoFormulario = document.getElementById('form-form');
 const bebidasFlag = document.getElementById('div-bebidas');
 const responseDiv = document.getElementById('respuesta');
@@ -22,6 +20,32 @@ let divCena = document.createElement('div');
 divCena.className = 'form-group';
 
 document.addEventListener("DOMContentLoaded", async () => {
+
+    // Llamar a las variables
+    let API_URL_GET;
+    let API_URL_POST;
+
+    try {
+        const configResponse = await fetch('/api/config');
+        if (!configResponse.ok) {
+            throw new Error(`Error al obtener la configuración: ${configResponse.status} - ${configResponse.statusText}`);
+        }
+        const config = await configResponse.json();
+        API_URL_GET = config.ENV_API_GET_URL;
+        API_URL_POST = config.ENV_API_POST_URL;
+        console.log("URLs de API obtenidas:", { API_URL_GET, API_URL_POST });
+
+        // Verificar si las URLs se cargaron correctamente
+        if (!API_URL_GET || !API_URL_POST) {
+            throw new Error("Las URLs de la API no se cargaron correctamente desde la configuración.");
+        }
+
+    } catch (error) {
+        console.error("Error crítico al cargar las URLs de la API:", error);
+        responseDiv.innerHTML = `<p style="color: red; text-align: center;">Error al inicializar el formulario: ${error.message}</p>`;
+        responseDiv.style.display = 'block';
+        return;
+    }
 
     let tablaGet; // Almacenar los datos del GET.
 
