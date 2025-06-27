@@ -33,9 +33,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const config = await configResponse.json();
         API_URL_GET = config.ENV_API_GET_URL;
         API_URL_POST = config.ENV_API_POST_URL;
-        console.log("URLs de API obtenidas:", { API_URL_GET, API_URL_POST });
-
-        // Verificar si las URLs se cargaron correctamente
         if (!API_URL_GET || !API_URL_POST) {
             throw new Error("Las URLs de la API no se cargaron correctamente desde la configuración.");
         }
