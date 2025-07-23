@@ -6,6 +6,7 @@
     --Text-Resaltar: #a4262c;
     --Text-InputPlaceholder: #757575;
     --Color-Acentuacion: #03787c;
+    --Color-AcentuacionRGBA: rgba(3, 120, 124, 0.85);
     --Color-Inputs: #ffffff;
     --Color-Acentuacion2: #005255;
     --Box-ShadowHover: #0078d4;
@@ -211,7 +212,7 @@ input[type="checkbox"]:focus {
 }
 
 .page-container h1, .page-container p {
-    background-color: var(--Color-Acentuacion);
+    background-color: var(--Color-AcentuacionRGBA);
     color: var(--Color-Inputs);
     box-shadow: 0 0 7px 4px var(--Color-Acentuacion);
     margin-left: 15px;
