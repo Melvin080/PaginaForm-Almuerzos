@@ -1,8 +1,15 @@
 //Cuando se abre la pagina de formulario.
+const ENV_API_URL_GET = "https://3af5a8bdea68e21b9770cc8a4b60a9.04.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/58c272229f23451aa4280bf30eda6ce0/triggers/manual/paths/invoke/?api-version=1&tenantId=tId&environmentName=3af5a8bd-ea68-e21b-9770-cc8a4b60a904&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=h29ljlyAH1LiyxHbiwhluAhaZULaIgYjj_adkVn1bnI";
+const ENV_API_URL_POST = "https://3af5a8bdea68e21b9770cc8a4b60a9.04.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8d2410f0cfa440e8a47cf2eef7e8979a/triggers/manual/paths/invoke/?api-version=1&tenantId=tId&environmentName=3af5a8bd-ea68-e21b-9770-cc8a4b60a904&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Rm0av8lcs9XedynEBWuaFrSdEXmeVtCR8Tp2Kv_Cc6c";
+const divPadre = document.getElementById('form-container');
 const elementoFormulario = document.getElementById('form-form');
 const bebidasFlag = document.getElementById('div-bebidas');
 const responseDiv = document.getElementById('respuesta');
+let domHeader = document.createDocumentFragment();
 let domActualizable = document.createDocumentFragment();
+
+let divHeader = document.createElement('div');
+divHeader.className = 'form-header';
 
 let divNormal = document.createElement('div');
 divNormal.className = 'form-group options';
@@ -22,9 +29,9 @@ divCena.className = 'form-group';
 document.addEventListener("DOMContentLoaded", async () => {
 
     // Llamar a las variables
-    let API_URL_GET;
-    let API_URL_POST;
-
+    let API_URL_GET = ENV_API_URL_GET;
+    let API_URL_POST = ENV_API_URL_POST;
+    /*
     try {
         const configResponse = await fetch('/api/config');
         if (!configResponse.ok) {
@@ -43,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         responseDiv.style.display = 'block';
         return;
     }
-
+    */
     let tablaGet; // Almacenar los datos del GET.
 
     try {
@@ -56,6 +63,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         //console.log("Datos recibidos de la API GET:", tablaGet);
 
         // Construir el HTML del formulario con los datos recibidos.
+        divHeader.innerHTML = `
+        <h1>Menú ${tablaGet.FechaLabel}</h1>
+        <h3>Antes de enviar el formulario asegurece de llenar los campos. <span class="requerido">(*) Obligatorio</span></h3>`;
+        domHeader.appendChild(divHeader);
+        divPadre.insertBefore(domHeader, elementoFormulario);
+
         divNormal.innerHTML = `
             <p class="pregunta-titulo">4. ${tablaGet.NormalLabel} <span class="requerido">*</span></p>
             <div class="opciones-group">
@@ -224,7 +237,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div class="mensajeExito">
                         <h2>¡Formulario Enviado con Éxito!</h2>
                         <p>Su menú a sido registrado.</p>
-                        </div>
+                    </div>
                 `;
 
             } catch (error) {

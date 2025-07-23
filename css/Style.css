@@ -1,3 +1,17 @@
+:root{
+    --Transparencia-Background: rgba(255, 255, 255, 0.7);
+    --Box-Shadow: rgba(0, 0, 0, 0.1);
+    --Text-Primario: #323130;
+    --Text-Secundario: #605e5c;
+    --Text-Resaltar: #a4262c;
+    --Text-InputPlaceholder: #757575;
+    --Color-Acentuacion: #03787c;
+    --Color-Inputs: #ffffff;
+    --Color-Acentuacion2: #005255;
+    --Box-ShadowHover: #0078d4;
+    --Box-ShadowRadioCheck: rgba(0, 120, 212, 0.4);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,21 +41,10 @@ body {
     z-index: -1;
 }
 
-.form-container {
-    background-color: rgba(255, 255, 255, 0.7);
+.form-container, .disponibilidad {
+    background-color: var(--Transparencia-Background);
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 30px 40px;
-    width: 100%;
-    max-width: 700px;
-    margin: 40px 20px;
-    box-sizing: border-box;
-}
-
-.disponibilidad {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--Box-Shadow);
     padding: 30px 40px;
     width: 100%;
     max-width: 700px;
@@ -53,7 +56,7 @@ body {
     text-align: center;
     font-size: 30px;
     font-weight: 600;
-    color: #323130;
+    color: var(--Text-Primary);
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -61,26 +64,26 @@ body {
 .form-header h1 {
     font-size: 30px;
     font-weight: 600;
-    color: #323130;
+    color: var(--Text-Primary);
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .form-header h3 {
     font-size: 14px;
-    color: #605e5c;
+    color: var(--Text-Secundario);
     line-height: 1.5;
     margin-bottom: 25px;
 }
 
 .requerido {
-    color: #a4262c;
+    color: var(--Text-Resaltar);
     font-weight: normal;
     margin-left: 2px;
 }
 
 .checkboxError {
-    color: #a4262c;
+    color: var(--Text-Resaltar);
     font-weight: normal;
     margin-left: 2px;
     display: none;
@@ -95,7 +98,7 @@ body {
     display: block;
     font-size: 17px;
     font-weight: 400;
-    color: #323130;
+    color: var(--Text-Primary);
     margin-bottom: 8px;
 }
 
@@ -106,20 +109,20 @@ input[type="text"] {
     border-radius: 0.25rem;
     border-bottom-color: transparent;
     font-size: 1rem;
-    color: #323130;
+    color: var(--Text-Primary);
     box-sizing: border-box;
     transition: border-color 0.2s;
 }
 
 input[type="text"]::placeholder {
-    color: #757575;
+    color: var(--Text-InputPlaceholder);
 }
 
 input[type="text"]:focus,
 input[type="text"]:hover {
     outline: none;
-    border-color: #03787c;
-    box-shadow: 0 0 0 1px #0078d4;
+    border-color: var(--Color-Acentuacion);
+    box-shadow: 0 0 0 1px var(--Box-ShadowHover);
 }
 
 .opciones-group label {
@@ -128,7 +131,7 @@ input[type="text"]:hover {
     font-weight: 400;
     margin-bottom: 10px;
     cursor: pointer;
-    color: #323130;
+    color: var(--Text-Primary);
     font-size: 0.875rem;
 }
 
@@ -140,7 +143,7 @@ input[type="checkbox"] {
     appearance: none;
     width: 18px;
     height: 18px;
-    border: 2px solid #605e5c;
+    border: 2px solid var(--Text-Secundario);
     border-radius: 50%;
     outline: none;
     cursor: pointer;
@@ -153,20 +156,20 @@ input[type="checkbox"] {
 }
 
 input[type="radio"]:checked {
-    background-color: #03787c;
-    border-color: #03787c;
-    box-shadow: inset 0 0 0 4px #fff;
+    background-color: var(--Color-Acentuacion);
+    border-color: var(--Color-Acentuacion);
+    box-shadow: inset 0 0 0 4px var(--Color-Inputs);
 }
 
 input[type="checkbox"]:checked {
-    background-color: #03787c;
-    border-color: #03787c;
+    background-color: var(--Color-Acentuacion);
+    border-color: var(--Color-Acentuacion);
 }
 
 input[type="checkbox"]:checked::before {
     content: '\2713';
     display: block;
-    color: #ffffff;
+    color: var(--Color-Inputs);
     font-size: 12px;
     line-height: 16px;
     text-align: center;
@@ -174,8 +177,8 @@ input[type="checkbox"]:checked::before {
 
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-    box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.4);
-    border-color: #03787c;
+    box-shadow: 0 0 0 2px var(--Box-ShadowRadioCheck);
+    border-color: var(--Color-Acentuacion);
 }
 
 .form-footer {
@@ -186,8 +189,8 @@ input[type="checkbox"]:focus {
 }
 
 .submit-button {
-    background-color: #03787c;
-    color: #ffffff;
+    background-color: var(--Color-Acentuacion);
+    color: var(--Color-Inputs);
     border: none;
     border-radius: 3px;
     padding: 10px 20px;
@@ -198,19 +201,19 @@ input[type="checkbox"]:focus {
 }
 
 .submit-button:hover {
-    background-color: #005255;
+    background-color: var(--Color-Acentuacion2);
 }
 
 .form-info {
     font-size: 12px;
-    color: #605e5c;
+    color: var(--Text-Secundario);
     margin: 0;
 }
 
 .page-container h1, .page-container p {
-    background-color: #03787C;
-    color: white;
-    box-shadow: 0 0 7px 4px #03787C;
+    background-color: var(--Color-Acentuacion);
+    color: var(--Color-Inputs);
+    box-shadow: 0 0 7px 4px var(--Color-Acentuacion);
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -218,9 +221,24 @@ input[type="checkbox"]:focus {
 .page-container h1 {
     text-align: center;
 }
-.page-container button {
-    color: #03787C;
-    background-color: white;
+
+.page-container p {
+    margin-top: 15px;
+}
+
+.page-container a {
+    margin-top: 25px;
+}
+
+.page-container a {
+    display: inline-block;
+    font-size: 16px;
+    color: var(--Color-Acentuacion);
+    background-color: var(--Color-Inputs);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
     border-style: none;
     padding: 12px;
     margin-left: 15px;
@@ -228,22 +246,30 @@ input[type="checkbox"]:focus {
     border-radius: 5px;
 }
 
-.mensajeExito {
+.mensajeExito, .disponibilidad {
     text-align: center;
     padding: 20px;
-    border: 1px solid #03787C;
-    background-color: #e8f5e9;
+    border: 1px solid var(--Color-Acentuacion);
+    background-color: var(--Color-Inputs);
     border-radius: 8px;
 }
 
-.mensajeExito h2 {
-    color: #03787C;
+.mensajeExito h2, .disponibilidad h2 {
+    color: var(--Color-Acentuacion);
 }
 
 @media (max-width: 600px) {
     body {
         align-items: flex-start;
         padding-top: 20px;
+    }
+
+    .page-container h1 {
+        margin-top: 120px;
+    }
+
+    .page-container .FirstP {
+        margin-top: 120px;
     }
 
     .form-container {
